@@ -5,8 +5,29 @@
     baseurl: http://nginx.org/packages/centos/$releasever/$basearch/
     enabled: yes
     gpgcheck: no
+  when: ansible_os_family == "RedHat"
 
 - name: Install Nginx
   yum:
     name: nginx
     state: present
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Add NGINX key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: ABF5BD827BD9BF62
+  when: ansible_os_family == "Debian"
+
+- name: Add NGINX repository
+  apt_repository:
+    repo: deb http://nginx.org/packages/ubuntu/ bionic nginx
+    #repo: deb-src http://nginx.org/packages/ubuntu/ $release nginx
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+  when: ansible_facts['os_family'] == "Debian"
