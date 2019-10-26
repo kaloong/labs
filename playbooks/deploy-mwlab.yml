@@ -1,0 +1,6 @@
+- hosts: mwlab
+  gather_facts: false
+  become: true
+  strategy: free
+  roles:
+    - { role: ../roles/inetsim }

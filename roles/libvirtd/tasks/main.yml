@@ -1,0 +1,4 @@
+- name: Install KVM (libvirtd)
+  yum:
+    name: libvirt-daemon-kvm
+    state: present

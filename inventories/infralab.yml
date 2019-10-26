@@ -1,0 +1,17 @@
+infra:
+  hosts:
+    infra00:                         # hostname
+      ansible_host: 192.168.33.10   # ip address
+      ansible_user: vagrant
+      memory: 1024                   # ram to be assigned in MB
+      ansible_ssh_private_key_file: .vagrant/machines/infra00/virtualbox/private_key
+    infra01:                         # hostname
+      ansible_host: 192.168.33.11   # ip address
+      ansible_user: vagrant
+      memory: 1024                   # ram to be assigned in MB
+      ansible_ssh_private_key_file: .vagrant/machines/infra01/virtualbox/private_key
+    infra02:                         # hostname
+      ansible_host: 192.168.33.12   # ip address
+      ansible_user: vagrant
+      memory: 1024                   # ram to be assigned in MB
+      ansible_ssh_private_key_file: .vagrant/machines/infra02/virtualbox/private_key

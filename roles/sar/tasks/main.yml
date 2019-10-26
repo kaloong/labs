@@ -1,0 +1,4 @@
+- name: Install sysstats 
+  yum:
+    name: sysstat
+    state: present

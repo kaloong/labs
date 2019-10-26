@@ -1,0 +1,4 @@
+- name: Install mail relay
+  yum:
+    name: postfix
+    state: present

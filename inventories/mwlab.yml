@@ -1,0 +1,17 @@
+mwlab:
+  hosts:
+    mwlab00:                         # hostname
+      ansible_host: 192.168.22.10   # ip address
+      ansible_user: vagrant
+      memory: 1024                   # ram to be assigned in MB
+      ansible_ssh_private_key_file: .vagrant/machines/mwlab00/virtualbox/private_key
+    target01:                         # hostname
+      ansible_host: 192.168.22.11   # ip address
+      ansible_user: vagrant
+      memory: 1024                   # ram to be assigned in MB
+      ansible_ssh_private_key_file: .vagrant/machines/target01/virtualbox/private_key
+#    target02:                         # hostname
+#      ansible_host: 192.168.22.12   # ip address
+#      ansible_user: vagrant
+#      memory: 1024                   # ram to be assigned in MB
+#      ansible_ssh_private_key_file: .vagrant/machines/target02/virtualbox/private_key

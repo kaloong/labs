@@ -1,0 +1,4 @@
+- name: rsyslog
+  yum:
+    name: rsyslog
+    state: present
